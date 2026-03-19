@@ -1,4 +1,4 @@
-cat > modules/quality_evaluation.py << 'EOF'
+
 import tkinter as tk
 from tkinter import Toplevel, Text, Scrollbar, messagebox
 import numpy as np
@@ -26,7 +26,6 @@ def evaluate(parent, classifier, data):
         
         accuracy = correct / len(data) * 100
         
-        # Показываем результаты
         window = Toplevel(parent)
         window.title("Оценка качества")
         window.geometry("600x500")
@@ -53,4 +52,4 @@ def evaluate(parent, classifier, data):
         
     except Exception as e:
         messagebox.showerror("Ошибка", f"Ошибка оценки качества:\n{str(e)}")
-EOF
+

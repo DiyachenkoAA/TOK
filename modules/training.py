@@ -1,12 +1,9 @@
-cat > modules/training.py << 'EOF'
 import tkinter as tk
 from tkinter import messagebox, Toplevel, Text, Scrollbar
 import numpy as np
 import pandas as pd
 
 class Classifier:
-    """Класс классификатора на основе метода минимальных расстояний"""
-    
     def __init__(self):
         self.class_centroids = {}
         self.class_names = []
@@ -43,7 +40,6 @@ def train_classifier(parent, data):
         classifier = Classifier()
         classifier.train(data)
         
-        # Показываем результаты
         window = Toplevel(parent)
         window.title("Результаты обучения")
         window.geometry("600x400")
@@ -75,4 +71,3 @@ def train_classifier(parent, data):
     except Exception as e:
         messagebox.showerror("Ошибка обучения", f"Не удалось обучить модель:\n{str(e)}")
         return None
-EOF

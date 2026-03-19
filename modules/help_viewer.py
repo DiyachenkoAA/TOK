@@ -1,4 +1,4 @@
-cat > modules/help_viewer.py << 'EOF'
+
 import tkinter as tk
 from tkinter import Toplevel, Text, Scrollbar
 
@@ -40,4 +40,3 @@ def show_help(parent):
     
     text_area.insert(tk.END, help_text)
     text_area.configure(state='disabled')
-EOF

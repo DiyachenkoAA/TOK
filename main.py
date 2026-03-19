@@ -103,7 +103,7 @@ class MainApplication:
         university_label.pack(pady=10)
         
         # ============================================================
-        # 4. ПАНЕЛЬ БЫСТРОГО ДОСТУПА (КНОПКИ)
+        # 4. ПАНЕЛЬ БЫСТРОГО ДОСТУПА (КНОПКИ) - ТЕПЕРЬ С КНОПКОЙ ВЫХОДА
         # ============================================================
         button_frame = tk.Frame(self.root, bg='lightgray', relief=tk.RAISED, bd=2)
         button_frame.pack(pady=20, padx=20, fill=tk.X)
@@ -115,6 +115,7 @@ class MainApplication:
             ("🔍 Распознать", self.recognize_object),
             ("📊 Оценка", self.evaluate_quality),
             ("❓ Справка", self.show_help),
+            ("🚪 Выход", self.exit_app),  # <--- ДОБАВЛЕНА КНОПКА ВЫХОДА
         ]
         
         for btn_text, btn_command in buttons:

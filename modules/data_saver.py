@@ -1,13 +1,9 @@
-cat > modules/data_saver.py << 'EOF'
 import tkinter as tk
 from tkinter import filedialog, messagebox
 import pandas as pd
 import os
 
 def save_data(parent, data):
-    """
-    Сохранение данных в файл
-    """
     if data is None:
         messagebox.showwarning("Нет данных", "Нет данных для сохранения")
         return
@@ -35,4 +31,3 @@ def save_data(parent, data):
         
     except Exception as e:
         messagebox.showerror("Ошибка сохранения", f"Не удалось сохранить файл:\n{str(e)}")
-EOF

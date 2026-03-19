@@ -1,4 +1,3 @@
-cat > modules/recognition.py << 'EOF'
 import tkinter as tk
 from tkinter import Toplevel, Label, Entry, Button, messagebox
 import numpy as np
@@ -59,4 +58,3 @@ def recognize_object(parent, classifier):
     Button(window, text="Распознать", command=recognize,
            font=('Arial', 12, 'bold'), bg='lightgreen',
            padx=30, pady=10).pack(pady=10)
-EOF
