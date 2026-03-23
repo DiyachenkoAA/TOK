@@ -4,6 +4,7 @@ import pandas as pd
 import os
 
 def save_data(parent, data):
+    """Сохранение данных в файл"""
     if data is None:
         messagebox.showwarning("Нет данных", "Нет данных для сохранения")
         return
@@ -23,7 +24,7 @@ def save_data(parent, data):
     
     try:
         if file_path.endswith('.csv'):
-            data.to_csv(file_path, index=False)
+            data.to_csv(file_path, index=False, encoding='utf-8-sig')
         else:
             data.to_excel(file_path, index=False)
         
